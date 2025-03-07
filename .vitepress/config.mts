@@ -34,6 +34,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
+
+    footer: {
+      message: 'Under CC-BY-NC-SA 4.0',
+      copyright: 'Copyright © 2025 GrassBlock'
+    }
   }
 })
