@@ -4,12 +4,16 @@ import {generateSidebar} from 'vitepress-sidebar';
 const vitepressSidebarOptions = {
     /* Options... */
     documentRootPath: '/',
-    scanStartPath: 'contents',
-    resolvePath: 'contents',
+    useTitleFromFrontmatter: true,
     useTitleFromFileHeading: true,
-    hyphenToSpace: true,
+    hyphenToSpace: false,
     capitalizeFirst: true,
-    excludeFolders: ['vitepress-how-to']
+    useFolderLinkFromIndexFile: true,
+    useFolderTitleFromIndexFile: true,
+    excludeFilesByFrontmatterFieldName: true,
+    sortMenusByFrontmatterOrder: true,
+    frontmatterOrderDefaultValue: 1,
+    manualSortFileNameByPriority: ['introduction.md'],
 };
 
 // https://vitepress.dev/reference/site-config
@@ -63,7 +67,13 @@ export default defineConfig({
             }
         },
 
-        sidebar: generateSidebar(vitepressSidebarOptions),
+        sidebar: generateSidebar([
+            {
+                ...vitepressSidebarOptions,
+                scanStartPath: 'contents',
+                resolvePath: '/',
+            }
+        ]),
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/vuejs/vitepress'}
