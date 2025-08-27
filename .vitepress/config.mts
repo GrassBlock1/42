@@ -27,6 +27,8 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             {text: '首页', link: '/'},
+            {text: '归档', link: '/archives/'},
+            {text: 'bot', link: '/realbot/'},
         ],
 
         search: {
@@ -69,9 +71,14 @@ export default defineConfig({
         sidebar: generateSidebar([
             {
                 ...vitepressSidebarOptions,
-                scanStartPath: 'contents',
-                resolvePath: '/',
-            }
+                scanStartPath: 'archives',
+                resolvePath: '/archives/',
+            },
+            {
+                ...vitepressSidebarOptions,
+                scanStartPath: 'realbot',
+                resolvePath: '/realbot/',
+            },
         ]),
 
         socialLinks: [
