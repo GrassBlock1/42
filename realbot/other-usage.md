@@ -2,7 +2,7 @@
 title: 其它用法
 ---
 # 其它用法
-bot 的除了[命令列表](/commands)中列出的用法以外的用法
+bot 的除了[命令列表](./commands)中列出的用法以外的用法
 ## Telegram
 ### 清理链接
 ![](assets/link-clean.png)
