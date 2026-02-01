@@ -6,7 +6,7 @@ hero:
   text: 一个综合性的文档站
   tagline: 我试图用我的经验对计算机使用方面加以扩充
   image:
-    src: /logo.png
+    src: assets/logo.svg
     alt: VitePress
   actions:
     - theme: brand
